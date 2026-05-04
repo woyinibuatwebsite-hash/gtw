@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nelzz Academy | Official Website</title>
+    <style>
+        :root {
+            --primary: #38bdf8;
+            --dark: #0f172a;
+            --card-bg: #1e293b;
+            --text-light: #f8fafc;
+            --accent: #fbbf24;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark);
+            color: var(--text-light);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('https://files.catbox.moe/9colpp.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-bottom: 4px solid var(--primary);
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            letter-spacing: 5px;
+            color: var(--primary);
+            text-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .founder-section {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 60px;
+            border: 1px solid #334155;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .founder-section h2 {
+            color: var(--accent);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 15px;
+            border-bottom: 4px solid var(--primary);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: #243347;
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+
+        .staff-img {
+            width: 80px;
+            height: 80px;
+            background: #334155;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--accent);
+            border: 2px solid var(--primary);
+            font-size: 1.5rem;
+        }
+
+        .contact-footer {
+            background: #020617;
+            padding: 60px 20px;
+            margin-top: 80px;
+            border-top: 1px solid #1e293b;
+        }
+
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-box h4 {
+            color: var(--primary);
+            border-left: 4px solid var(--primary);
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+
+        .footer-box p {
+            margin: 8px 0;
+            color: #94a3b8;
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 20px;
+            background: #000;
+            font-size: 0.9rem;
+            color: #475569;
+        }
+
+        a { color: var(--primary); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>NELZZ ACADEMY</h1>
+        <p style="font-size: 1.2rem; color: #cbd5e1;">Membangun Generasi Digital yang Tak Terhentikan</p>
+    </header>
+
+    <div class="container">
+        <section class="founder-section">
+            <p style="text-transform: uppercase; letter-spacing: 3px; color: #94a3b8; font-weight: bold;">FOUNDER & CHAIRMAN</p>
+            <h2>NelzzisHeree</h2>
+            <p style="max-width: 700px; margin: 20px auto; color: #cbd5e1; font-style: italic;">
+                "Pendidikan adalah kunci untuk memanipulasi masa depan. Di sini, kita menciptakan realitas baru melalui kode."
+            </p>
+        </section>
+
+        <h2 style="text-align: center; color: var(--primary); font-size: 2rem;">STAFF & TENAGA PENDIDIK</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="staff-img">AW</div>
+                <h3>Drs. Arya Wijaya</h3>
+                <p><strong>Kepala Sekolah</strong></p>
+                <p>Berwibawa, kacamata, jas formal hitam. Sosok pemimpin yang disiplin.</p>
+            </div>
+            <div class="card">
+                <div class="staff-img">SM</div>
+                <h3>Siti Mariam, M.Pd</h3>
+                <p><strong>Wakil Kurikulum</strong></p>
+                <p>Wanita cerdas berhijab modern, ahli strategi edukasi masa depan.</p>
+            </div>
+            <div class="card">
+                <div class="staff-img">BR</div>
+                <h3>Bang Reza</h3>
+                <p><strong>Guru IT & Coding</strong></p>
+                <p>Gaya undercut, jago pemrograman dan modifikasi sistem bot.</p>
+            </div>
+            <div class="card">
+                <div class="staff-img">ID</div>
+                <h3>Ibu Desi</h3>
+                <p><strong>Guru Seni & Desain</strong></p>
+                <p>Kreatif, modis, dan penuh ekspresi dalam mengajar desain visual.</p>
+            </div>
+        </div>
+
+        <h2 style="text-align: center; color: var(--primary); margin-top: 80px; font-size: 2rem;">FASILITAS UNGGULAN</h2>
+        <div class="grid">
+            <div class="card" style="border-bottom-color: var(--accent);">
+                <h3>Cyber Lab</h3>
+                <p>Laboratorium dengan PC Spek Dewa untuk coding, render, dan security.</p>
+            </div>
+            <div class="card" style="border-bottom-color: var(--accent);">
+                <h3>E-Sport Arena</h3>
+                <p>Wadah pelatihan gaming kompetitif profesional bagi para talenta muda.</p>
+            </div>
+            <div class="card" style="border-bottom-color: var(--accent);">
+                <h3>Creative Studio</h3>
+                <p>Tempat pembuatan konten visual dan editing video standar industri.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="contact-footer">
+        <div class="footer-content">
+            <div class="footer-box">
+                <h4>TENTANG KAMI</h4>
+                <p>Nelzz Academy adalah institusi pendidikan digital yang didedikasikan untuk mencetak talenta terbaik di bidang teknologi.</p>
+            </div>
+            <div class="footer-box">
+                <h4>KONTAK RESMI</h4>
+                <p><strong>WA:</strong> +62 881036685697</p>
+                <p><strong>Email:</strong> nelzzzstore@gmail.com</p>
+                <p><strong>Web:</strong> <a href="https://nelzz-sand.vercel.app">nelzz-sand.vercel.app</a></p>
+            </div>
+            <div class="footer-box">
+                <h4>LOKASI</h4>
+                <p>Digital District, Cyber City</p>
+                <p>Blok Z-01, Indonesia</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        © 2026 Nelzz Academy. Created & Developed by <b>NelzzisHeree</b>.
+    </div>
+
+</body>
+  </html>
+  
