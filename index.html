@@ -1,768 +1,313 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Arfy | Personal Website</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta name="description"
+content="Website pribadi Arfy">
+
+<meta name="theme-color"
+content="#6d5dfc">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
 
 <style>
 
+/* ===================================
+   ROOT
+=================================== */
+
 :root{
-    --bg:#f4f6fb;
-    --card:#ffffff;
-    --text:#222;
-    --primary:#6d5dfc;
-    --secondary:#8b5cf6;
-    --shadow:0 10px 35px rgba(0,0,0,.15);
+
+--bg:#f5f7fb;
+--card:#ffffff;
+--text:#202020;
+--primary:#6d5dfc;
+--secondary:#8b5cf6;
+--border:#e5e7eb;
+
+--shadow:
+0 10px 30px rgba(
+0,0,0,.12);
+
 }
+
+/* ===================================
+   DARK MODE
+=================================== */
 
 .dark{
-    --bg:#0f172a;
-    --card:#1e293b;
-    --text:#f8fafc;
-    --primary:#8b5cf6;
-    --secondary:#6d5dfc;
-    --shadow:0 10px 35px rgba(0,0,0,.4);
+
+--bg:#0f172a;
+--card:#1e293b;
+--text:#ffffff;
+--primary:#8b5cf6;
+--secondary:#6d5dfc;
+--border:#334155;
+
 }
 
+/* ===================================
+   RESET
+=================================== */
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Segoe UI,sans-serif;
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
 }
 
 html{
-    scroll-behavior:smooth;
+
+scroll-behavior:smooth;
+
 }
 
 body{
-    background:var(--bg);
-    color:var(--text);
-    overflow-x:hidden;
-    transition:.4s;
+
+font-family:
+'Poppins',
+sans-serif;
+
+background:
+var(--bg);
+
+color:
+var(--text);
+
+overflow-x:hidden;
+
+transition:.4s;
+
 }
 
-/* =====================
-   LOADING SCREEN
-===================== */
+/* ===================================
+   LOADER
+=================================== */
 
 #loader{
-    position:fixed;
-    inset:0;
-    background:#0a0a0a;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    z-index:99999;
+
+position:fixed;
+
+inset:0;
+
+background:
+#0a0a0a;
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+flex-direction:column;
+
+z-index:999999;
+
 }
 
 .loader-title{
-    color:white;
-    font-size:2rem;
-    font-weight:bold;
-    margin-bottom:20px;
+
+color:white;
+
+font-size:2rem;
+
+font-weight:700;
+
+margin-bottom:20px;
+
 }
 
 .loader-bar{
-    width:250px;
-    height:8px;
-    background:#333;
-    border-radius:20px;
-    overflow:hidden;
+
+width:280px;
+
+height:8px;
+
+border-radius:20px;
+
+background:#222;
+
+overflow:hidden;
+
 }
 
 .loader-progress{
-    height:100%;
-    width:0%;
-    background:linear-gradient(
-        90deg,
-        #6d5dfc,
-        #8b5cf6
-    );
 
-    animation:loading 2.5s linear forwards;
+height:100%;
+
+width:0%;
+
+background:
+linear-gradient(
+90deg,
+#6d5dfc,
+#8b5cf6
+);
+
+animation:
+loading 2.5s linear forwards;
+
 }
 
 @keyframes loading{
-    from{
-        width:0%;
-    }
 
-    to{
-        width:100%;
-    }
+0%{
+width:0%;
 }
 
-/* =====================
+100%{
+width:100%;
+}
+
+}
+
+/* ===================================
    NAVBAR
-===================== */
+=================================== */
 
 .navbar{
-    width:100%;
-    position:sticky;
-    top:0;
-    z-index:999;
-    background:var(--card);
-    box-shadow:0 2px 20px rgba(0,0,0,.1);
+
+position:sticky;
+
+top:0;
+
+width:100%;
+
+background:
+var(--card);
+
+backdrop-filter:
+blur(10px);
+
+z-index:999;
+
+border-bottom:
+1px solid
+var(--border);
+
 }
 
 .nav-container{
-    max-width:1200px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px;
+
+max-width:1200px;
+
+margin:auto;
+
+padding:
+
+18px
+20px;
+
+display:flex;
+
+justify-content:
+space-between;
+
+align-items:center;
+
 }
 
 .logo{
-    font-size:1.5rem;
-    font-weight:bold;
-    color:var(--primary);
+
+font-size:1.5rem;
+
+font-weight:700;
+
+color:
+var(--primary);
+
 }
 
-.nav-right{
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
+.nav-actions{
 
-/* =====================
-   DARK MODE BUTTON
-===================== */
+display:flex;
+
+gap:10px;
+
+align-items:center;
+
+}
 
 .theme-btn{
-    width:65px;
-    height:34px;
-    border:none;
-    border-radius:50px;
-    cursor:pointer;
-    position:relative;
-    background:#ddd;
+
+width:60px;
+
+height:34px;
+
+border:none;
+
+border-radius:999px;
+
+cursor:pointer;
+
+background:#ddd;
+
+position:relative;
+
 }
 
 .theme-btn::before{
-    content:"☀️";
-    position:absolute;
-    width:28px;
-    height:28px;
-    left:3px;
-    top:3px;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:white;
-    transition:.4s;
+
+content:"☀️";
+
+position:absolute;
+
+width:28px;
+height:28px;
+
+background:white;
+
+border-radius:50%;
+
+left:3px;
+top:3px;
+
+display:flex;
+
+align-items:center;
+justify-content:center;
+
+transition:.4s;
+
 }
 
 .dark .theme-btn::before{
-    content:"🌙";
-    transform:translateX(31px);
-}
 
-/* =====================
-   HERO SECTION
-===================== */
+content:"🌙";
 
-.hero{
-    max-width:1200px;
-    margin:auto;
-    padding:60px 20px;
-}
-
-.profile-card{
-    background:var(--card);
-    border-radius:30px;
-    overflow:hidden;
-    box-shadow:var(--shadow);
-    animation:fadeUp 1s ease;
-}
-
-.header{
-    background:
-    linear-gradient(
-    135deg,
-    #6d5dfc,
-    #8b5cf6
-    );
-
-    text-align:center;
-    color:white;
-    padding:60px 20px;
-    position:relative;
-}
-
-/* =====================
-   PROFILE IMAGE
-===================== */
-
-.profile-wrapper{
-    position:relative;
-    display:inline-block;
-}
-
-.profile-pic{
-    width:150px;
-    height:150px;
-    object-fit:cover;
-    border-radius:50%;
-    border:5px solid white;
-    animation:float 3s ease-in-out infinite;
-}
-
-.online-dot{
-    width:20px;
-    height:20px;
-    background:#22c55e;
-    border-radius:50%;
-    position:absolute;
-    right:10px;
-    bottom:10px;
-    border:3px solid white;
-}
-
-/* =====================
-   NAME
-===================== */
-
-#typing{
-    margin-top:15px;
-    font-size:2.4rem;
-    font-weight:bold;
-}
-
-.subtitle{
-    opacity:.95;
-    margin-top:10px;
-}
-
-/* =====================
-   CONTENT
-===================== */
-
-.content{
-    padding:35px;
-}
-
-.section{
-    margin-bottom:40px;
-}
-
-.section-title{
-    color:var(--primary);
-    font-size:1.5rem;
-    margin-bottom:15px;
-}
-
-.section p{
-    line-height:1.8;
-}
-
-/* =====================
-   ANIMATIONS
-===================== */
-
-@keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translateY(40px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-@keyframes float{
-
-    0%{
-        transform:translateY(0);
-    }
-
-    50%{
-        transform:translateY(-10px);
-    }
-
-    100%{
-        transform:translateY(0);
-    }
+transform:
+translateX(26px);
 
 }
 
-/* =====================
-   MOBILE
-===================== */
+/* ===================================
+   CONTAINER
+=================================== */
 
-@media(max-width:768px){
+.container{
 
-    #typing{
-        font-size:2rem;
-    }
+max-width:1200px;
 
-    .profile-pic{
-        width:120px;
-        height:120px;
-    }
+margin:auto;
+
+padding:
+
+30px
+20px;
 
 }
-
-</style>
-</head>
-
-<body>
-
-<div id="loader">
-
-    <div class="loader-title">
-        Welcome To Arfy's Website
-    </div>
-
-    <div class="loader-bar">
-        <div class="loader-progress"></div>
-    </div>
-
-</div>
-
-<nav class="navbar">
-
-    <div class="nav-container">
-
-        <div class="logo">
-            Arfy
-        </div>
-
-        <div class="nav-right">
-
-            <button
-            class="theme-btn"
-            onclick="toggleTheme()">
-            </button>
-
-        </div>
-
-    </div>
-
-</nav>
-
-<section class="hero">
-
-<div class="profile-card">
-
-<div class="header">
-
-<div class="profile-wrapper">
-
-<img
-src="profile.jpg"
-class="profile-pic"
-alt="Arfy">
-
-<div class="online-dot"></div>
-
-</div>
-
-<h1 id="typing"></h1>
-
-<p class="subtitle">
-Pelajar • Gamer • Tech Enthusiast
-</p>
-
-</div>
-
-<div class="content">
-
-<div class="section">
-
-<h2 class="section-title">
-👋 Tentang Saya
-</h2>
-
-<p>
-Halo! Saya Arfy. Saya suka bermain game,
-mempelajari teknologi, dan mencoba hal-hal baru.
-Terima kasih sudah mengunjungi website saya.
-</p>
-
-</div>
-<!-- =====================
-     WAKTU
-===================== -->
-
-<div class="section">
-
-<h2 class="section-title">
-⏰ Waktu Saat Ini
-</h2>
-
-<div id="clock">
-00:00:00
-</div>
-
-<div id="date">
-Loading...
-</div>
-
-</div>
-
-<!-- =====================
-     SKILL
-===================== -->
-
-<div class="section">
-
-<h2 class="section-title">
-📊 Skill
-</h2>
-
-<p>🎮 Gaming</p>
-<div class="skill-bar">
-<div class="skill-fill" id="gamingSkill">
-95%
-</div>
-</div>
-
-<br>
-
-<p>💻 Teknologi</p>
-<div class="skill-bar">
-<div class="skill-fill" id="techSkill">
-85%
-</div>
-</div>
-
-<br>
-
-<p>🌐 Internet</p>
-<div class="skill-bar">
-<div class="skill-fill" id="internetSkill">
-90%
-</div>
-</div>
-
-</div>
-
-<!-- =====================
-     STATISTIK
-===================== -->
-
-<div class="section">
-
-<h2 class="section-title">
-🔥 Statistik
-</h2>
-
-<div class="stats-grid">
-
-<div class="stat-card">
-<h3>🎮</h3>
-<p>Gaming</p>
-</div>
-
-<div class="stat-card">
-<h3>💻</h3>
-<p>Teknologi</p>
-</div>
-
-<div class="stat-card">
-<h3>🎵</h3>
-<p>Musik</p>
-</div>
-
-<div class="stat-card">
-<h3>🌐</h3>
-<p>Internet</p>
-</div>
-
-</div>
-
-</div>
-
-<!-- =====================
-     SOSIAL MEDIA
-===================== -->
-
-<div class="section">
-
-<h2 class="section-title">
-📱 Sosial Media
-</h2>
-
-<div class="social-grid">
-
-<a href="https://instagram.com/NelzzOfficial"
-target="_blank">
-📸 Instagram
-</a>
-
-<a href="https://tiktok.com/@cnelzzgod"
-target="_blank">
-🎵 TikTok
-</a>
-
-<button id="discordBtn">
-💬 Discord
-</button>
-
-</div>
-
-</div>
-
-<!-- =====================
-     GALLERY
-===================== -->
-
-<div class="section">
-
-<h2 class="section-title">
-🖼️ Gallery
-</h2>
-
-<div class="gallery">
-
-<div class="gallery-box">
-Foto 1
-</div>
-
-<div class="gallery-box">
-Foto 2
-</div>
-
-<div class="gallery-box">
-Foto 3
-</div>
-
-</div>
-
-</div>
-<!-- =====================
-     MUSIC PLAYER
-===================== -->
-
-<div class="section">
-
-<h2 class="section-title">
-🎵 Music Player
-</h2>
-
-<div class="music-player">
-
-<h3 id="songTitle">
-Bergema Sampai Selamanya
-</h3>
-
-<div class="music-controls">
-
-<button id="prevBtn">
-⏮️
-</button>
-
-<button id="playBtn">
-▶️
-</button>
-
-<button id="nextBtn">
-⏭️
-</button>
-
-</div>
-
-<div class="volume-box">
-
-<label>
-🔊 Volume
-</label>
-
-<input
-type="range"
-id="volumeSlider"
-min="0"
-max="100"
-value="50">
-
-</div>
-
-<div class="song-list">
-
-<div class="song-item active-song">
-🎵 Bergema Sampai Selamanya
-</div>
-
-<div class="song-item">
-🎵 Everything You Are
-</div>
-
-</div>
-
-<audio id="bgMusic"></audio>
-
-</div>
-
-</div>
-
-<!-- =====================
-     QUOTES
-===================== -->
-
-<div class="section">
-
-<h2 class="section-title">
-💭 Quote Hari Ini
-</h2>
-
-<p id="quoteText">
-Never Stop Learning.
-</p>
-
-<button id="quoteBtn">
-Quote Baru
-</button>
-
-</div>
-
-<!-- =====================
-     CONTACT
-===================== -->
-
-<div class="section">
-
-<h2 class="section-title">
-📬 Kontak
-</h2>
-
-<div class="contact-box">
-
-<p>
-📸 Instagram :
-@NelzzOfficial
-</p>
-
-<p>
-🎵 TikTok :
-@cnelzzgod
-</p>
-
-<p>
-💬 Discord :
-nelzz1485
-</p>
-
-</div>
-
-</div>
-
-<!-- =====================
-     ACHIEVEMENT
-===================== -->
-
-<div class="section">
-
-<h2 class="section-title">
-🏆 Achievement
-</h2>
-
-<div class="achievement-grid">
-
-<div class="achievement-card">
-🎮 Gamer
-</div>
-
-<div class="achievement-card">
-💻 Tech Enthusiast
-</div>
-
-<div class="achievement-card">
-🎵 Music Lover
-</div>
-
-<div class="achievement-card">
-🌐 Internet Explorer
-</div>
-
-</div>
-
-</div>
-
-<!-- =====================
-     VISITOR CARD
-===================== -->
-
-<div class="section">
-
-<h2 class="section-title">
-👀 Visitor
-</h2>
-
-<div class="visitor-box">
-
-<h3 id="visitorCount">
-1024
-</h3>
-
-<p>
-Total Pengunjung
-</p>
-
-</div>
-
-</div>
-
-<!-- =====================
-     FOOTER
-===================== -->
-
-</div>
-
-<div class="footer">
-
-<h2>
-Arfy
-</h2>
-
-<p>
-Terima kasih sudah mengunjungi website saya.
-</p>
-
-<br>
-
-<p>
-© 2026 Arfy • All Rights Reserved
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =====================
-     BACK TO TOP
-===================== -->
-
-<button id="topBtn">
-
-⬆️
-
-</button>
-
-<!-- =====================
-     PARTICLES BG
-===================== -->
-
-<div id="particles"></div>
-
-<!-- =====================
-     SCRIPT
-===================== -->
-
-<script src="script.js"></script>
-
-</body>
-</html>
