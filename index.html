@@ -8,306 +8,738 @@
 
 <title>Arfy | Personal Website</title>
 
-<meta name="description"
-content="Website pribadi Arfy">
+<link rel="stylesheet" href="style.css">
 
-<meta name="theme-color"
-content="#6d5dfc">
+</head>
 
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
+<body>
 
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
+<!-- LOADER -->
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-rel="stylesheet">
+<div id="loader">
 
-<style>
+<h1>
+Welcome To Arfy's Website
+</h1>
 
-/* ===================================
-   ROOT
-=================================== */
+<div id="loaderBar">
 
-:root{
+<div id="loaderProgress"></div>
 
---bg:#f5f7fb;
---card:#ffffff;
---text:#202020;
---primary:#6d5dfc;
---secondary:#8b5cf6;
---border:#e5e7eb;
+</div>
 
---shadow:
-0 10px 30px rgba(
-0,0,0,.12);
+</div>
 
-}
+<!-- NAVBAR -->
 
-/* ===================================
-   DARK MODE
-=================================== */
+<nav class="navbar">
 
-.dark{
+<div class="logo">
+Arfy
+</div>
 
---bg:#0f172a;
---card:#1e293b;
---text:#ffffff;
---primary:#8b5cf6;
---secondary:#6d5dfc;
---border:#334155;
+<div class="nav-menu">
 
-}
+<a href="#home">
+Home
+</a>
 
-/* ===================================
-   RESET
-=================================== */
+<a href="#about">
+About
+</a>
 
-*{
+<a href="#skills">
+Skills
+</a>
 
-margin:0;
-padding:0;
-box-sizing:border-box;
+<a href="#gallery">
+Gallery
+</a>
 
-}
+<a href="#contact">
+Contact
+</a>
 
-html{
+</div>
 
-scroll-behavior:smooth;
+<button id="themeBtn">
 
-}
+🌙
 
-body{
+</button>
 
-font-family:
-'Poppins',
-sans-serif;
+</nav>
 
-background:
-var(--bg);
+<!-- HOME -->
 
-color:
-var(--text);
+<section id="home">
 
-overflow-x:hidden;
+<div class="profile-card">
 
-transition:.4s;
+<div class="profile-wrapper">
 
-}
+<img
+src="profile.jpg"
+alt="Arfy"
+class="profile-pic">
 
-/* ===================================
-   LOADER
-=================================== */
+<div class="online-dot"></div>
 
-#loader{
+</div>
 
-position:fixed;
+<h1 id="typingText">
 
-inset:0;
+</h1>
 
-background:
-#0a0a0a;
+<p>
 
-display:flex;
+Pelajar • Gamer • Tech Enthusiast
 
-justify-content:center;
-align-items:center;
+</p>
 
-flex-direction:column;
+</div>
 
-z-index:999999;
+</section>
 
-}
+<!-- ABOUT -->
 
-.loader-title{
+<section id="about">
 
-color:white;
+<h2>
 
-font-size:2rem;
+Tentang Saya
 
-font-weight:700;
+</h2>
 
-margin-bottom:20px;
+<p>
 
-}
+Halo! Saya Arfy.
 
-.loader-bar{
+Saya suka bermain game,
+mempelajari teknologi,
+dan mencoba hal-hal baru.
 
-width:280px;
+Terima kasih sudah
+mengunjungi website saya.
 
-height:8px;
+</p>
 
-border-radius:20px;
+</section><!-- CLOCK -->
 
-background:#222;
+<section id="clock-section">
 
-overflow:hidden;
+<h2>
 
-}
+Waktu Saat Ini
 
-.loader-progress{
+</h2>
 
-height:100%;
+<div id="clockCard">
 
-width:0%;
+<div id="clock">
 
-background:
-linear-gradient(
-90deg,
-#6d5dfc,
-#8b5cf6
-);
+00:00:00
 
-animation:
-loading 2.5s linear forwards;
+</div>
 
-}
+<div id="date">
 
-@keyframes loading{
+Loading...
 
-0%{
-width:0%;
-}
+</div>
 
-100%{
-width:100%;
-}
+</div>
 
-}
+</section>
 
-/* ===================================
-   NAVBAR
-=================================== */
+<!-- SOCIAL MEDIA -->
 
-.navbar{
+<section id="social">
 
-position:sticky;
+<h2>
 
-top:0;
+Sosial Media
 
-width:100%;
+</h2>
 
-background:
-var(--card);
+<div class="social-container">
 
-backdrop-filter:
-blur(10px);
+<a
+href="https://instagram.com/NelzzOfficial"
+target="_blank">
 
-z-index:999;
+Instagram
 
-border-bottom:
-1px solid
-var(--border);
+</a>
 
-}
+<a
+href="https://tiktok.com/@cnelzzgod"
+target="_blank">
 
-.nav-container{
+TikTok
 
-max-width:1200px;
+</a>
 
-margin:auto;
+<button id="discordBtn">
 
-padding:
+Discord
 
-18px
-20px;
+</button>
 
-display:flex;
+</div>
 
-justify-content:
-space-between;
+</section>
 
-align-items:center;
+<!-- STATS -->
 
-}
+<section id="stats">
 
-.logo{
+<h2>
 
-font-size:1.5rem;
+Statistik
 
-font-weight:700;
+</h2>
 
-color:
-var(--primary);
+<div class="stats-grid">
 
-}
+<div class="stat-card">
 
-.nav-actions{
+<h3>
 
-display:flex;
+🎮
 
-gap:10px;
+</h3>
 
-align-items:center;
+<p>
 
-}
+Gaming
 
-.theme-btn{
+</p>
 
-width:60px;
+</div>
 
-height:34px;
+<div class="stat-card">
 
-border:none;
+<h3>
 
-border-radius:999px;
+💻
 
-cursor:pointer;
+</h3>
 
-background:#ddd;
+<p>
 
-position:relative;
+Teknologi
 
-}
+</p>
 
-.theme-btn::before{
+</div>
 
-content:"☀️";
+<div class="stat-card">
 
-position:absolute;
+<h3>
 
-width:28px;
-height:28px;
+🎵
 
-background:white;
+</h3>
 
-border-radius:50%;
+<p>
 
-left:3px;
-top:3px;
+Musik
 
-display:flex;
+</p>
 
-align-items:center;
-justify-content:center;
+</div>
 
-transition:.4s;
+<div class="stat-card">
 
-}
+<h3>
 
-.dark .theme-btn::before{
+🌐
 
-content:"🌙";
+</h3>
 
-transform:
-translateX(26px);
+<p>
 
-}
+Internet
 
-/* ===================================
-   CONTAINER
-=================================== */
+</p>
 
-.container{
+</div>
 
-max-width:1200px;
+</div>
 
-margin:auto;
+</section>
 
-padding:
+<!-- SKILLS -->
 
-30px
-20px;
+<section id="skills">
 
-}
+<h2>
+
+Skill
+
+</h2>
+
+<div class="skill-item">
+
+<p>
+
+Gaming
+
+</p>
+
+<div class="skill-bar">
+
+<div
+class="skill-fill"
+data-width="95">
+
+95%
+
+</div>
+
+</div>
+
+</div>
+
+<div class="skill-item">
+
+<p>
+
+Teknologi
+
+</p>
+
+<div class="skill-bar">
+
+<div
+class="skill-fill"
+data-width="85">
+
+85%
+
+</div>
+
+</div>
+
+</div>
+
+<div class="skill-item">
+
+<p>
+
+Internet
+
+</p>
+
+<div class="skill-bar">
+
+<div
+class="skill-fill"
+data-width="90">
+
+90%
+
+</div>
+
+</div>
+
+</div>
+
+</section><!-- GALLERY -->
+
+<section id="gallery">
+
+<h2>
+
+Gallery
+
+</h2>
+
+<div class="gallery-grid">
+
+<div class="gallery-item">
+
+<img
+src="profile.jpg"
+alt="Gallery 1">
+
+</div>
+
+<div class="gallery-item">
+
+<img
+src="profile.jpg"
+alt="Gallery 2">
+
+</div>
+
+<div class="gallery-item">
+
+<img
+src="profile.jpg"
+alt="Gallery 3">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MUSIC PLAYER -->
+
+<section id="music">
+
+<h2>
+
+Music Player
+
+</h2>
+
+<div class="music-player">
+
+<div class="music-cover">
+
+<img
+src="profile.jpg"
+alt="Cover">
+
+</div>
+
+<h3 id="songTitle">
+
+Bergema Sampai Selamanya
+
+</h3>
+
+<p id="artistName">
+
+Music Playlist
+
+</p>
+
+<div class="music-controls">
+
+<button id="prevBtn">
+
+⏮️
+
+</button>
+
+<button id="playBtn">
+
+▶️
+
+</button>
+
+<button id="nextBtn">
+
+⏭️
+
+</button>
+
+</div>
+
+<input
+type="range"
+id="progressBar"
+value="0">
+
+<input
+type="range"
+id="volumeSlider"
+min="0"
+max="100"
+value="50">
+
+<audio id="audioPlayer"></audio>
+
+</div>
+
+</section>
+
+<!-- QUOTE -->
+
+<section id="quote">
+
+<h2>
+
+Quote
+
+</h2>
+
+<div class="quote-box">
+
+<p id="quoteText">
+
+Never Stop Learning.
+
+</p>
+
+<button id="newQuoteBtn">
+
+Quote Baru
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ACHIEVEMENT -->
+
+<section id="achievement">
+
+<h2>
+
+Achievement
+
+</h2>
+
+<div class="achievement-grid">
+
+<div class="achievement-card">
+
+🏆 Gamer
+
+</div>
+
+<div class="achievement-card">
+
+💻 Tech Enthusiast
+
+</div>
+
+<div class="achievement-card">
+
+🎵 Music Lover
+
+</div>
+
+<div class="achievement-card">
+
+🌐 Explorer
+
+</div>
+
+</div>
+
+</section>
+
+<!-- VISITOR -->
+
+<section id="visitor">
+
+<h2>
+
+Visitor Counter
+
+</h2>
+
+<div class="visitor-card">
+
+<h1 id="visitorCount">
+
+1024
+
+</h1>
+
+<p>
+
+Total Visitors
+
+</p>
+
+</div>
+
+</section><!-- CONTACT -->
+
+<section id="contact">
+
+<h2>
+
+Kontak
+
+</h2>
+
+<div class="contact-container">
+
+<div class="contact-card">
+
+<h3>
+
+📸 Instagram
+
+</h3>
+
+<p>
+
+@NelzzOfficial
+
+</p>
+
+<a
+href="https://instagram.com/NelzzOfficial"
+target="_blank">
+
+Kunjungi
+
+</a>
+
+</div>
+
+<div class="contact-card">
+
+<h3>
+
+🎵 TikTok
+
+</h3>
+
+<p>
+
+@cnelzzgod
+
+</p>
+
+<a
+href="https://tiktok.com/@cnelzzgod"
+target="_blank">
+
+Kunjungi
+
+</a>
+
+</div>
+
+<div class="contact-card">
+
+<h3>
+
+💬 Discord
+
+</h3>
+
+<p id="discordText">
+
+nelzz1485
+
+</p>
+
+<button id="copyDiscordBtn">
+
+Copy Discord
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MESSAGE -->
+
+<section id="message">
+
+<h2>
+
+Kirim Pesan
+
+</h2>
+
+<form id="messageForm">
+
+<input
+type="text"
+placeholder="Nama">
+
+<input
+type="email"
+placeholder="Email">
+
+<textarea
+placeholder="Pesan"></textarea>
+
+<button type="submit">
+
+Kirim
+
+</button>
+
+</form>
+
+</section>
+
+<!-- BACK TO TOP -->
+
+<button id="topBtn">
+
+⬆️
+
+</button>
+
+<!-- PARTICLES -->
+
+<div id="particlesContainer">
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-content">
+
+<h2>
+
+Arfy
+
+</h2>
+
+<p>
+
+Pelajar • Gamer • Tech Enthusiast
+
+</p>
+
+<p>
+
+Instagram :
+@NelzzOfficial
+
+</p>
+
+<p>
+
+TikTok :
+@cnelzzgod
+
+</p>
+
+<p>
+
+Discord :
+nelzz1485
+
+</p>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>
+
+© 2026 Arfy.
+All Rights Reserved.
+
+</p>
+
+</div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
