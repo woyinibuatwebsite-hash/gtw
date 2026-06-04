@@ -548,35 +548,4 @@ console.log(
 "Website Arfy Loaded Successfully"
 );
 
-/* CALCULATOR */
-
-const display =
-document.getElementById("calcDisplay");
-
-function clearDisplay(){
-
-display.value = "";
-
-}
-
-function clearDisplay(){
-
-display.value = "";
-
-}
-
-function calculate(){
-
-try{
-
-display.value =
-eval(display.value);
-
-}catch{
-
-display.value =
-"Error";
-
-}
-
 }
