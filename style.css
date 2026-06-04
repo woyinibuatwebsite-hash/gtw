@@ -664,3 +664,47 @@ text-align:center;
 font-weight:bold;
 
 }
+.dark{
+
+background:#ffffff;
+
+color:#111827;
+
+}
+
+.dark .navbar{
+
+background:
+rgba(
+255,
+255,
+255,
+0.95
+);
+
+}
+
+.dark .profile-card,
+.dark .stat-card,
+.dark .music-player,
+.dark .quote-box,
+.dark #clockCard,
+.dark .achievement-card{
+
+background:#f3f4f6;
+
+color:#111827;
+
+}
+
+.dark .nav-menu a{
+
+color:#111827;
+
+}
+
+.dark .logo{
+
+color:#7c3aed;
+
+}
