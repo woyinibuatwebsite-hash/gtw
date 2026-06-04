@@ -1,57 +1,232 @@
-/* ===================================
-   HERO SECTION
-=================================== */
+/* ====================================
+   RESET
+==================================== */
 
-.hero{
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-padding-top:40px;
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:
+Arial,
+sans-serif;
+
+background:
+#0f172a;
+
+color:
+white;
+
+overflow-x:hidden;
+
+}
+
+/* ====================================
+   LOADER
+==================================== */
+
+#loader{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:
+#020617;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+align-items:center;
+
+z-index:99999;
+
+}
+
+#loader h1{
+
+font-size:2rem;
+
+margin-bottom:20px;
+
+}
+
+#loaderBar{
+
+width:300px;
+
+height:10px;
+
+background:
+#1e293b;
+
+border-radius:20px;
+
+overflow:hidden;
+
+}
+
+#loaderProgress{
+
+width:0%;
+
+height:100%;
+
+background:
+linear-gradient(
+90deg,
+#8b5cf6,
+#6d5dfc
+);
+
+}
+
+/* ====================================
+   NAVBAR
+==================================== */
+
+.navbar{
+
+position:sticky;
+
+top:0;
+
+display:flex;
+
+justify-content:
+space-between;
+
+align-items:center;
+
+padding:
+15px 30px;
+
+background:
+rgba(
+15,
+23,
+42,
+0.95
+);
+
+backdrop-filter:
+blur(10px);
+
+z-index:999;
+
+}
+
+.logo{
+
+font-size:1.5rem;
+
+font-weight:bold;
+
+color:
+#8b5cf6;
+
+}
+
+.nav-menu{
+
+display:flex;
+
+gap:20px;
+
+}
+
+.nav-menu a{
+
+text-decoration:none;
+
+color:white;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.nav-menu a:hover{
+
+color:
+#8b5cf6;
+
+}
+
+#themeBtn{
+
+border:none;
+
+background:
+#8b5cf6;
+
+color:white;
+
+padding:
+10px 15px;
+
+border-radius:10px;
+
+cursor:pointer;
+
+}
+
+/* ====================================
+   HOME
+==================================== */
+
+#home{
+
+padding:
+80px 20px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
 
 }
 
 .profile-card{
 
-background:
-var(--card);
+max-width:700px;
 
-border-radius:30px;
-
-overflow:hidden;
-
-box-shadow:
-var(--shadow);
-
-border:
-1px solid
-var(--border);
-
-animation:
-fadeUp 1s ease;
-
-}
-
-.header{
+width:100%;
 
 background:
-linear-gradient(
-135deg,
-#6d5dfc,
-#8b5cf6
-);
+#1e293b;
 
 padding:
-60px 20px;
+40px;
 
-text-align:center;
+border-radius:25px;
 
-position:relative;
-
-color:white;
+box-shadow:
+0 10px 30px rgba(
+0,
+0,
+0,
+0.3
+);
 
 }
-
-/* ===================================
-   PROFILE
-=================================== */
 
 .profile-wrapper{
 
@@ -63,19 +238,17 @@ display:inline-block;
 
 .profile-pic{
 
-width:160px;
+width:180px;
 
-height:160px;
-
-border-radius:50%;
+height:180px;
 
 object-fit:cover;
 
-border:
-5px solid white;
+border-radius:50%;
 
-animation:
-floating 3s ease-in-out infinite;
+border:
+5px solid
+#8b5cf6;
 
 }
 
@@ -83,118 +256,97 @@ floating 3s ease-in-out infinite;
 
 position:absolute;
 
+bottom:10px;
+right:10px;
+
 width:20px;
 height:20px;
 
-background:#22c55e;
+background:
+#22c55e;
 
 border-radius:50%;
-
-bottom:12px;
-right:12px;
 
 border:
 3px solid white;
 
 }
 
-#typing{
+#typingText{
+
+margin-top:20px;
 
 font-size:2.5rem;
 
-font-weight:700;
-
-margin-top:15px;
+font-weight:bold;
 
 }
 
-.subtitle{
+.profile-card p{
 
 margin-top:10px;
 
-opacity:.95;
+opacity:.8;
 
-font-size:1rem;
+}/* ====================================
+   SECTION
+==================================== */
 
-}
-
-/* ===================================
-   GREETING CARD
-=================================== */
-
-.greeting-card{
-
-margin-top:25px;
-
-display:inline-block;
-
-background:
-rgba(255,255,255,.15);
+section{
 
 padding:
-12px 20px;
+60px 20px;
 
-border-radius:999px;
+max-width:
+1100px;
 
-font-size:.95rem;
-
-backdrop-filter:
-blur(8px);
+margin:auto;
 
 }
 
-/* ===================================
-   CONTENT
-=================================== */
+section h2{
 
-.content{
+font-size:2rem;
 
-padding:35px;
-
-}
-
-.section{
-
-margin-bottom:40px;
-
-}
-
-.section-title{
-
-font-size:1.5rem;
-
-font-weight:700;
-
-margin-bottom:15px;
+margin-bottom:20px;
 
 color:
-var(--primary);
+#8b5cf6;
 
 }
 
-.section p{
+/* ====================================
+   ABOUT
+==================================== */
+
+#about{
+
+text-align:center;
+
+}
+
+#about p{
 
 line-height:1.8;
 
+font-size:1.05rem;
+
+opacity:.9;
+
 }
 
-/* ===================================
+/* ====================================
    CLOCK
-=================================== */
+==================================== */
 
-.clock-card{
+#clockCard{
 
 background:
-var(--bg);
+#1e293b;
 
-padding:
-20px;
+padding:30px;
 
 border-radius:20px;
-
-border:
-1px solid
-var(--border);
 
 text-align:center;
 
@@ -202,108 +354,318 @@ text-align:center;
 
 #clock{
 
-font-size:2rem;
+font-size:2.5rem;
 
-font-weight:700;
+font-weight:bold;
 
 }
 
 #date{
 
-margin-top:8px;
+margin-top:10px;
 
 opacity:.8;
 
 }
 
-/* ===================================
+/* ====================================
    SOCIAL
-=================================== */
+==================================== */
 
-.social-grid{
+.social-container{
 
 display:flex;
 
 flex-wrap:wrap;
 
-gap:12px;
+gap:15px;
+
+}
+
+.social-container a,
+.social-container button{
+
+padding:
+12px 20px;
+
+border:none;
+
+border-radius:12px;
+
+background:
+#8b5cf6;
+
+color:white;
+
+text-decoration:none;
+
+cursor:pointer;
+
+font-weight:bold;
+
+}
+
+/* ====================================
+   STATS
+==================================== */
+
+.stats-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(
+auto-fit,
+minmax(180px,1fr)
+);
+
+gap:15px;
+
+}
+
+.stat-card{
+
+background:
+#1e293b;
+
+padding:25px;
+
+border-radius:20px;
+
+text-align:center;
+
+}
+
+.stat-card h3{
+
+font-size:2rem;
+
+margin-bottom:10px;
+
+}
+
+/* ====================================
+   SKILLS
+==================================== */
+
+.skill-item{
+
+margin-bottom:25px;
+
+}
+
+.skill-bar{
+
+height:25px;
+
+background:
+#334155;
+
+border-radius:20px;
+
+overflow:hidden;
+
+}
+
+.skill-fill{
+
+height:100%;
+
+background:
+linear-gradient(
+90deg,
+#8b5cf6,
+#6d5dfc
+);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-weight:bold;
+
+}
+
+/* ====================================
+   GALLERY
+==================================== */
+
+.gallery-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(
+auto-fit,
+minmax(250px,1fr)
+);
+
+gap:15px;
+
+}
+
+.gallery-item{
+
+overflow:hidden;
+
+border-radius:20px;
+
+background:
+#1e293b;
+
+}
+
+.gallery-item img{
+
+width:100%;
+
+height:250px;
+
+object-fit:cover;
+
+display:block;
+
+}
+
+/* ====================================
+   MUSIC PLAYER
+==================================== */
+
+.music-player{
+
+background:
+#1e293b;
+
+padding:30px;
+
+border-radius:25px;
+
+text-align:center;
+
+}
+
+.music-cover img{
+
+width:220px;
+
+height:220px;
+
+border-radius:20px;
+
+object-fit:cover;
+
+}
+
+.music-controls{
+
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
+margin-top:20px;
+
+}
+
+.music-controls button{
+
+width:55px;
+
+height:55px;
+
+border:none;
+
+border-radius:50%;
+
+background:
+#8b5cf6;
+
+color:white;
+
+cursor:pointer;
+
+font-size:1.1rem;
+
+}
+
+#progressBar,
+#volumeSlider{
+
+width:100%;
 
 margin-top:15px;
 
 }
 
-.social-btn{
+/* ====================================
+   QUOTE
+==================================== */
 
-text-decoration:none;
+.quote-box{
+
+background:
+#1e293b;
+
+padding:25px;
+
+border-radius:20px;
+
+text-align:center;
+
+}
+
+#newQuoteBtn{
+
+margin-top:15px;
+
+padding:
+12px 20px;
 
 border:none;
 
-cursor:pointer;
-
-padding:
-12px 18px;
-
-border-radius:15px;
-
 background:
-var(--primary);
+#8b5cf6;
 
 color:white;
 
-font-weight:600;
+border-radius:10px;
 
-transition:.3s;
-
-}
-
-.social-btn:hover{
-
-transform:
-translateY(-5px);
+cursor:pointer;
 
 }
 
-/* ===================================
-   ANIMATION
-=================================== */
+/* ====================================
+   ACHIEVEMENT
+==================================== */
 
-@keyframes fadeUp{
+.achievement-grid{
 
-from{
+display:grid;
 
-opacity:0;
+grid-template-columns:
+repeat(
+auto-fit,
+minmax(200px,1fr)
+);
 
-transform:
-translateY(40px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:
-translateY(0);
+gap:15px;
 
 }
 
-}
+.achievement-card{
 
-@keyframes floating{
+background:
+#1e293b;
 
-0%{
-transform:
-translateY(0);
-}
+padding:25px;
 
-50%{
-transform:
-translateY(-10px);
-}
+border-radius:20px;
 
-100%{
-transform:
-translateY(0);
-}
+text-align:center;
+
+font-weight:bold;
 
 }
