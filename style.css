@@ -103,34 +103,20 @@ linear-gradient(
 ==================================== */
 
 .navbar{
+    position: sticky;
+    top: 0;
 
-position:sticky;
+    display: flex;
+    align-items: center;
 
-top:0;
+    padding: 15px 10px;
 
-display:flex;
+    background: rgba(15,23,42,0.95);
+    backdrop-filter: blur(10px);
 
-justify-content:
-space-between;
+    z-index: 999;
 
-align-items:center;
-
-padding:
-15px 30px;
-
-background:
-rgba(
-15,
-23,
-42,
-0.95
-);
-
-backdrop-filter:
-blur(10px);
-
-z-index:999;
-
+    gap: 15px;
 }
 
 .logo{
@@ -139,11 +125,11 @@ font-size:1.5rem;
 
 font-weight:bold;
 
-color:
-#8b5cf6;
+color:#8b5cf6;
+
+margin-right:15px;
 
 }
-
 .nav-menu{
 
 display:flex;
