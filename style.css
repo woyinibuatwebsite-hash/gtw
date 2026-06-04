@@ -96,6 +96,9 @@ linear-gradient(
 #6d5dfc
 );
 
+animation:
+loading 2.5s linear forwards;
+
 }
 
 /* ====================================
