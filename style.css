@@ -726,6 +726,9 @@ color:#7c3aed;
 /* CALCULATOR */
 
 .calculator{
+position:relative;
+z-index:9999;
+}
 
 background:#1e293b;
 
