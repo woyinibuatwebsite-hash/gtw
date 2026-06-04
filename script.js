@@ -551,9 +551,7 @@ console.log(
 /* CALCULATOR */
 
 const display =
-document.getElementById(
-"calcDisplay"
-);
+document.getElementById("calcDisplay");
 
 function appendValue(value){
 
