@@ -555,7 +555,9 @@ document.getElementById("calcDisplay");
 
 function appendValue(value){
 
-display.value += value;
+document.getElementById(
+"calcDisplay"
+).value += value;
 
 }
 
