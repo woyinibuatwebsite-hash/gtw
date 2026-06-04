@@ -553,11 +553,9 @@ console.log(
 const display =
 document.getElementById("calcDisplay");
 
-function appendValue(value){
+function clearDisplay(){
 
-document.getElementById(
-"calcDisplay"
-).value += value;
+display.value = "";
 
 }
 
