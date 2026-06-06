@@ -547,5 +547,3 @@ form.reset();
 console.log(
 "Website Arfy Loaded Successfully"
 );
-
-}
