@@ -195,15 +195,17 @@ copyBtn.innerText =
 
 const songs = [
 
-"music1.mp3",
-"music2.mp3"
+"music1.mp3"
+"music2.mp3",
+"music3.mp3"
 
 ];
 
 const songTitles = [
 
-"Bergema Sampai Selamanya",
-"smene smene sung sung hay"
+"Bergema Sampai Selamanya"
+"smene smene sung sung hay",
+"wish you were here"
 
 ];
 
