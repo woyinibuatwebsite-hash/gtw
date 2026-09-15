@@ -1,0 +1,724 @@
+html, body{
+overflow-x:hidden;
+width:100%;
+}
+/* ====================================
+   RESET
+==================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:
+Arial,
+sans-serif;
+
+background:
+#0f172a;
+
+color:
+white;
+
+overflow-x:hidden;
+
+}
+
+/* ====================================
+   LOADER
+==================================== */
+
+#loader{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:
+#020617;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+align-items:center;
+
+z-index:99999;
+
+}
+
+#loader h1{
+
+font-size:2rem;
+
+margin-bottom:20px;
+
+}
+
+#loaderBar{
+
+width:300px;
+
+height:10px;
+
+background:
+#1e293b;
+
+border-radius:20px;
+
+overflow:hidden;
+
+}
+
+#loaderProgress{
+
+width:0%;
+
+height:100%;
+
+background:
+linear-gradient(
+90deg,
+#8b5cf6,
+#6d5dfc
+);
+
+animation:
+loading 2.5s linear forwards;
+
+}
+
+@keyframes loading{
+
+0%{
+width:0%;
+}
+
+100%{
+width:100%;
+}
+
+}
+/* ====================================
+   NAVBAR
+==================================== */
+
+.navbar{
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+
+    padding: 15px 10px;
+
+    background: rgba(15,23,42,0.95);
+    backdrop-filter: blur(10px);
+
+    z-index: 999;
+
+    gap: 15px;
+}
+
+.logo{
+
+font-size:1.5rem;
+
+font-weight:bold;
+
+color:#8b5cf6;
+
+margin-right:15px;
+
+}
+.nav-menu{
+
+display:flex;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+.nav-menu a{
+
+text-decoration:none;
+
+color:white;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.nav-menu a:hover{
+
+color:
+#8b5cf6;
+
+}
+
+#themeBtn{
+
+border:none;
+
+background:
+#8b5cf6;
+
+color:white;
+
+padding:
+10px 15px;
+
+border-radius:10px;
+
+cursor:pointer;
+
+}
+
+/* ====================================
+   HOME
+==================================== */
+
+#home{
+
+padding:
+80px 20px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+}
+
+.profile-card{
+
+max-width:700px;
+
+width:100%;
+
+margin:0 auto;
+
+background:
+#1e293b;
+
+padding:
+40px;
+
+border-radius:25px;
+
+box-shadow:
+0 10px 30px rgba(
+0,
+0,
+0,
+0.3
+);
+
+}
+
+.profile-wrapper{
+
+position:relative;
+
+display:inline-block;
+
+}
+
+.profile-pic{
+
+width:180px;
+
+height:180px;
+
+object-fit:cover;
+
+border-radius:50%;
+
+border:
+5px solid
+#8b5cf6;
+
+}
+
+.online-dot{
+
+position:absolute;
+
+bottom:10px;
+right:10px;
+
+width:20px;
+height:20px;
+
+background:
+#22c55e;
+
+border-radius:50%;
+
+border:
+3px solid white;
+
+}
+
+#typingText{
+
+margin-top:20px;
+
+font-size:2.5rem;
+
+font-weight:bold;
+
+}
+
+.profile-card p{
+
+margin-top:10px;
+
+opacity:.8;
+
+}/* ====================================
+   SECTION
+==================================== */
+
+section{
+
+padding:
+60px 20px;
+
+max-width:
+1100px;
+
+margin:auto;
+
+}
+
+section h2{
+
+font-size:2rem;
+
+margin-bottom:20px;
+
+color:
+#8b5cf6;
+
+}
+
+/* ====================================
+   ABOUT
+==================================== */
+
+#about{
+
+text-align:center;
+
+}
+
+#about p{
+
+line-height:1.8;
+
+font-size:1.05rem;
+
+opacity:.9;
+
+}
+
+/* ====================================
+   CLOCK
+==================================== */
+
+#clockCard{
+
+background:
+#1e293b;
+
+padding:30px;
+
+border-radius:20px;
+
+text-align:center;
+
+}
+
+#clock{
+
+font-size:2.5rem;
+
+font-weight:bold;
+
+}
+
+#date{
+
+margin-top:10px;
+
+opacity:.8;
+
+}
+
+/* ====================================
+   SOCIAL
+==================================== */
+
+.social-container{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:15px;
+
+}
+
+.social-container a,
+.social-container button{
+
+padding:
+12px 20px;
+
+border:none;
+
+border-radius:12px;
+
+background:
+#8b5cf6;
+
+color:white;
+
+text-decoration:none;
+
+cursor:pointer;
+
+font-weight:bold;
+
+}
+
+/* ====================================
+   STATS
+==================================== */
+
+.stats-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(
+auto-fit,
+minmax(180px,1fr)
+);
+
+gap:15px;
+
+}
+
+.stat-card{
+
+background:
+#1e293b;
+
+padding:25px;
+
+border-radius:20px;
+
+text-align:center;
+
+}
+
+.stat-card h3{
+
+font-size:2rem;
+
+margin-bottom:10px;
+
+}
+
+/* ====================================
+   SKILLS
+==================================== */
+
+.skill-item{
+
+margin-bottom:25px;
+
+}
+
+.skill-bar{
+
+height:25px;
+
+background:
+#334155;
+
+border-radius:20px;
+
+overflow:hidden;
+
+}
+
+.skill-fill{
+
+height:100%;
+
+background:
+linear-gradient(
+90deg,
+#8b5cf6,
+#6d5dfc
+);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-weight:bold;
+
+}
+
+/* ====================================
+   GALLERY
+==================================== */
+
+.gallery-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(
+auto-fit,
+minmax(250px,1fr)
+);
+
+gap:15px;
+
+}
+
+.gallery-item{
+
+overflow:hidden;
+
+border-radius:20px;
+
+background:
+#1e293b;
+
+}
+
+.gallery-item img{
+
+width:100%;
+
+height:250px;
+
+object-fit:cover;
+
+display:block;
+
+}
+
+/* ====================================
+   MUSIC PLAYER
+==================================== */
+
+.music-player{
+
+background:
+#1e293b;
+
+padding:30px;
+
+border-radius:25px;
+
+text-align:center;
+
+}
+
+.music-cover img{
+
+width:220px;
+
+height:220px;
+
+border-radius:20px;
+
+object-fit:cover;
+
+}
+
+.music-controls{
+
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
+margin-top:20px;
+
+}
+
+.music-controls button{
+
+width:55px;
+
+height:55px;
+
+border:none;
+
+border-radius:50%;
+
+background:
+#8b5cf6;
+
+color:white;
+
+cursor:pointer;
+
+font-size:1.1rem;
+
+}
+
+#progressBar,
+#volumeSlider{
+
+width:100%;
+
+margin-top:15px;
+
+}
+
+/* ====================================
+   QUOTE
+==================================== */
+
+.quote-box{
+
+background:
+#1e293b;
+
+padding:25px;
+
+border-radius:20px;
+
+text-align:center;
+
+}
+
+#newQuoteBtn{
+
+margin-top:15px;
+
+padding:
+12px 20px;
+
+border:none;
+
+background:
+#8b5cf6;
+
+color:white;
+
+border-radius:10px;
+
+cursor:pointer;
+
+}
+
+/* ====================================
+   ACHIEVEMENT
+==================================== */
+
+.achievement-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(
+auto-fit,
+minmax(200px,1fr)
+);
+
+gap:15px;
+
+}
+
+.achievement-card{
+
+background:
+#1e293b;
+
+padding:25px;
+
+border-radius:20px;
+
+text-align:center;
+
+font-weight:bold;
+
+}
+.dark{
+
+background:#ffffff;
+
+color:#111827;
+
+}
+
+.dark .navbar{
+
+background:
+rgba(
+255,
+255,
+255,
+0.95
+);
+
+}
+
+.dark .profile-card,
+.dark .stat-card,
+.dark .music-player,
+.dark .quote-box,
+.dark #clockCard,
+.dark .achievement-card{
+
+background:#f3f4f6;
+
+color:#111827;
+
+}
+
+.dark .nav-menu a{
+
+color:#111827;
+
+}
+
+.dark .logo{
+
+color:#7c3aed;
+
+}
